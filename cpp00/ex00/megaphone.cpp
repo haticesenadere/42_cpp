@@ -1,27 +1,21 @@
-
 #include <iostream>
-#include <cstdlib>
+#include <cctype>
 
-    using std::cout;
-    using std::endl;
-
-    std::string string_to_upper(std::string arg)
+int main(int ac, char **av)
+{
+    if (ac < 2)
     {
-        for (size_t i = 0; i < arg.length(); i++)
-            arg[i] = toupper(arg[i]);
-        return arg;
-            
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        return 0;
     }
-    int main(int argc, char **argv)
+    for (int i = 1; i < ac; i++)
     {
-        if (argc == 1)
+        for (int j = 0; av[i][j] != '\0'; j++)
         {
-            std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-            return EXIT_SUCCESS;  
+          av[i][j] = toupper(av[i][j]);
+          std::cout << av[i][j];
         }
-        for (int i = 1; i < argc; i++)
-            cout << string_to_upper(argv[i]);
-        cout << endl;
-        return EXIT_SUCCESS;
-
-    }   
+    }
+    std::cout << std::endl;
+    return 0;
+}
