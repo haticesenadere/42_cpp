@@ -6,12 +6,12 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = PhoneBook.cpp Contact.cpp Main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-all = $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@
-	
-%.o: %.cpp
+    
+%.o: %.cpp 
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
