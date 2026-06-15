@@ -7,8 +7,10 @@
 [19920104_091532] index:6;amount:754;created
 [19920104_091532] index:7;amount:16576;created
 //Buraya kadar yani created olanlar constructor fonksiyonu ile basıldı. 
+
 [19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 //Bu yani total bilgiyi veren satır displayAccountInfos fonskiyonu ile basıldı.
+
 [19920104_091532] index:0;amount:42;deposits:0;withdrawals:0
 [19920104_091532] index:1;amount:54;deposits:0;withdrawals:0
 [19920104_091532] index:2;amount:957;deposits:0;withdrawals:0
@@ -18,6 +20,7 @@
 [19920104_091532] index:6;amount:754;deposits:0;withdrawals:0
 [19920104_091532] index:7;amount:16576;deposits:0;withdrawals:0
 //Buraya kadar olanlar ise status bölümü yani hesabın mevcut durumu var. displayStatus fonksiyonu ile yazıldı. 
+
 [19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
 [19920104_091532] index:1;p_amount:54;deposit:765;amount:819;nb_deposits:1
 [19920104_091532] index:2;p_amount:957;deposit:564;amount:1521;nb_deposits:1
@@ -26,8 +29,11 @@
 [19920104_091532] index:5;p_amount:0;deposit:23;amount:23;nb_deposits:1
 [19920104_091532] index:6;p_amount:754;deposit:9;amount:763;nb_deposits:1
 [19920104_091532] index:7;p_amount:16576;deposit:20;amount:16596;nb_deposits:1
-//Deposito bölümü geliyor bu satırlar makeDeposit fonksiyonundan geliyor.      
+//Deposito bölümü geliyor bu satırlar makeDeposit fonksiyonundan geliyor.     
+
 [19920104_091532] accounts:8;total:21524;deposits:8;withdrawals:0
+//Yine displayAccountsInfos fonksiyonundan geliyor. Yani toplam para miktarı ve yapılan toplam deposit sayısı gibi bilgileri veriyor.
+
 [19920104_091532] index:0;amount:47;deposits:1;withdrawals:0
 [19920104_091532] index:1;amount:819;deposits:1;withdrawals:0
 [19920104_091532] index:2;amount:1521;deposits:1;withdrawals:0
@@ -36,6 +42,9 @@
 [19920104_091532] index:5;amount:23;deposits:1;withdrawals:0
 [19920104_091532] index:6;amount:763;deposits:1;withdrawals:0
 [19920104_091532] index:7;amount:16596;deposits:1;withdrawals:0
+//Yine status bölümü yani displayStatus fonksiyonundan geliyor.
+
+
 [19920104_091532] index:0;p_amount:47;withdrawal:refused
 [19920104_091532] index:1;p_amount:819;withdrawal:34;amount:785;nb_withdrawals:1
 [19920104_091532] index:2;p_amount:1521;withdrawal:657;amount:864;nb_withdrawals:1
@@ -44,7 +53,13 @@
 [19920104_091532] index:5;p_amount:23;withdrawal:refused
 [19920104_091532] index:6;p_amount:763;withdrawal:657;amount:106;nb_withdrawals:1
 [19920104_091532] index:7;p_amount:16596;withdrawal:7654;amount:8942;nb_withdrawals:1
+//Withdraw bölümü geliyor bu satırlar makeWithdrawal fonksiyonundan geliyor.
+
+
 [19920104_091532] accounts:8;total:12442;deposits:8;withdrawals:6
+//Yine displayAccountsInfos fonksiyonundan geliyor. Yani toplam para miktarı ve yapılan toplam deposit ve withdrawal sayısı gibi bilgileri veriyor.
+
+
 [19920104_091532] index:0;amount:47;deposits:1;withdrawals:0
 [19920104_091532] index:1;amount:785;deposits:1;withdrawals:1
 [19920104_091532] index:2;amount:864;deposits:1;withdrawals:1
@@ -53,6 +68,9 @@
 [19920104_091532] index:5;amount:23;deposits:1;withdrawals:0
 [19920104_091532] index:6;amount:106;deposits:1;withdrawals:1
 [19920104_091532] index:7;amount:8942;deposits:1;withdrawals:1
+//Yine status bölümü yani displayStatus fonksiyonundan geliyor.
+
+
 [19920104_091532] index:0;amount:47;closed
 [19920104_091532] index:1;amount:785;closed
 [19920104_091532] index:2;amount:864;closed
@@ -61,6 +79,7 @@
 [19920104_091532] index:5;amount:23;closed
 [19920104_091532] index:6;amount:106;closed
 [19920104_091532] index:7;amount:8942;closed
+//Hesap kapatma işlemi yani destructor fonksiyonu ile basıldı. Her bir hesap kapatılırken o hesabın mevcut durumunu yani amount bilgisini veriyor.
 
 
 
