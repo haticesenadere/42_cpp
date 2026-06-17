@@ -6,6 +6,14 @@
 
 class Contact
 {
+
+    private:
+        std::string _firstName;
+        std::string _lastName;
+		std::string _nickName;
+        std::string _phoneNumber;
+        std::string _darkestSecret;
+    
     public:
 
         void set_FirstName(std::string str);
@@ -20,14 +28,7 @@ class Contact
         std::string get_PhoneNumber() const;
         std::string get_DarkestSecret() const;
 
-        void displayFullContact() const;
-
-    private:
-        std::string _firstName;
-        std::string _lastName;
-        std::string _nickName;
-        std::string _phoneNumber;
-        std::string _darkestSecret;
+        void displayFullContact(void) const;
 };
 
 #endif

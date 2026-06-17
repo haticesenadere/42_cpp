@@ -1,6 +1,7 @@
 
 #include "Contact.hpp"
 #include <iostream>
+#include <iomanip>
 
 void Contact::set_FirstName(std::string str)
 {
@@ -50,11 +51,31 @@ std::string Contact::get_DarkestSecret() const
     return _darkestSecret;
 }
 
-void Contact::displayFullContact() const
+void Contact::displayFullContact(void) const
 {
-    std::cout << "First Name:" << get_FirstName() << std::endl;
-    std::cout << "Last Name:" << get_LastName() << std::endl;
-    std::cout << "Nick Name:" << get_NickName() << std::endl;
-    std::cout << "Phone Number:" << get_PhoneNumber() << std::endl;
-    std::cout << "Darkest Secret:" << get_DarkestSecret() << std::endl;
+    std::cout << std::endl;
+    std::cout << "========== CONTACT DETAILS ==========" << std::endl;
+
+    std::cout << std::left
+              << std::setw(16) << "First Name"
+              << ": " << _firstName << std::endl;
+
+    std::cout << std::left
+              << std::setw(16) << "Last Name"
+              << ": " << _lastName << std::endl;
+
+    std::cout << std::left
+              << std::setw(16) << "Nickname"
+              << ": " << _nickName << std::endl;
+
+    std::cout << std::left
+              << std::setw(16) << "Phone Number"
+              << ": " << _phoneNumber << std::endl;
+
+    std::cout << std::left
+              << std::setw(16) << "Darkest Secret"
+              << ": " << _darkestSecret << std::endl;
+
+    std::cout << "=====================================" << std::endl;
+    std::cout << std::right;
 }

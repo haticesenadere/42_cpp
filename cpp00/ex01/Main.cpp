@@ -1,20 +1,20 @@
-#include <string>
 #include <iostream>
-
+#include <string>
 #include "PhoneBook.hpp"
+
 int main()
 {
-     PhoneBook newPhoneBook;
-        std::string input;
+    PhoneBook newPhoneBook;
+    std::string input;
+
+    std::cout << "Welcome to the PhoneBook application!" << std::endl;
+    std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
 
     while (1)
     {
-      
-        std::cout << "Welcome to the Phone Book. Please select an operation:" << std::endl;
-       
-        if(!std::getline(std::cin, input))
+        std::cout << "> ";
+        if (!std::getline(std::cin, input))
             break;
-
         if (input == "ADD")
             newPhoneBook.AddContact();
         else if (input == "SEARCH")
