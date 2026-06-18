@@ -28,7 +28,7 @@ std::string PhoneBook::emptyInfoFilled(std::string prompt) const
     }
 }
 
-std::string PhoneBook::cutColumn(const std::string text) const
+std::string PhoneBook::cutColumn(std::string text) const
 {
     if (text.length() > 10)
         return (text.substr(0, 9) + ".");
@@ -41,18 +41,26 @@ void PhoneBook::AddContact()
     Contact newContact;
 
     std::string first_name = emptyInfoFilled("Please enter First Name:\n");
+    if (first_name.empty())
+        return;
     std::string last_name = emptyInfoFilled("Please enter Last Name:\n");
+    if (last_name.empty())
+        return;
     std::string nick_name = emptyInfoFilled("Please enter Nick Name:\n");
+    if (nick_name.empty())
+        return;
     std::string phonen_number = emptyInfoFilled("Please enter Phone Number:\n");
+    if (phonen_number.empty())
+        return;
     std::string darkest_seceret = emptyInfoFilled("Please enter Info:\n");
+    if (darkest_seceret.empty())
+        return;
 
     newContact.set_FirstName(first_name);
     newContact.set_LastName(last_name);
     newContact.set_NickName(nick_name);
     newContact.set_PhoneNumber(phonen_number);
     newContact.set_DarkestSecret(darkest_seceret);
-
-   
 
     _contacts[_nextPersonWhereAdded] = newContact;
     if (_count < 8)
